@@ -8,6 +8,15 @@ pipeline {
         password(name: 'SONAR_SERVER_PWD', description: 'Enter SONAR password')
     }
     stages {
+        stage('Check SCM connexion') {
+            steps{
+                script {
+                    echo "Testing connexion..."
+                    sleep 2
+                    echo "Connexion OK!"
+                }
+            }
+        }
         stage('ShowAnswer') {
             steps{
                 script {
@@ -17,6 +26,27 @@ pipeline {
                     echo "Branch choice: ${params.BRANCH}"
                     echo "SONAR PASSWORD: ${params.SONAR_SERVER_PWD}"
                 }
+            }
+        }
+        stage('BUILD') {
+            steps {
+                echo 'Build in ${params.BRANCH} environnement...'
+                sleep 2
+                echo "Build OK!"
+            }
+        }
+        stage('TEST') {
+            steps {
+                echo 'Testing...'
+                sleep 1
+                echo "Test OK!"
+            }
+        }
+        stage('DEPLOY') {
+            steps {
+                echo 'Mise en production...'
+                sleep 1
+                echo "OK!"
             }
         }
     }
