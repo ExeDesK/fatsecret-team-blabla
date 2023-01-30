@@ -8,15 +8,6 @@ pipeline {
         password(name: 'SONAR_SERVER_PWD', description: 'Enter SONAR password')
     }
     stages {
-        stage('Check SCM connexion') {
-            steps{
-                script {
-                    echo "Testing connexion..."
-                    sleep 2
-                    echo "Connexion OK!"
-                }
-            }
-        }
         stage('ShowAnswer') {
             steps{
                 script {
