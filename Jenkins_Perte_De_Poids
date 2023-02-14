@@ -6,7 +6,7 @@ pipeline {
         String(name: 'LOSE', description 'How many weight you want lose?')
         text(name: 'DESC', description:'Describe about the job details')
         booleanParam(name: 'SKIP_TEST', description: 'Want to skip running Test cases?')
-        choice(name: 'BRANCH', choices: ['Master', 'Dev'], description: 'Choose the Branch')
+        choice(name: 'SEX', choices: ['MAN','WOMAN'], description: 'Choose your sex')
     }
     stages {
         stage ('BUILD') {
@@ -58,7 +58,7 @@ pipeline {
                 echo 'Building "[US] Fidéliser ses clients"...'
                 sleep 2
                 echo 'Build OK!'
-                echo 'Building "[US] Proposer des différents types d'abonnement pour l'application"...'
+                echo 'Building "[US] Proposer des différents types d\'abonnement pour l\'application"...'
                 sleep 1
                 echo 'Build OK!'
                 echo 'Building "[US] Proposer un diététicien personnel"...'
@@ -133,7 +133,7 @@ pipeline {
                         echo 'Testing "[US] Fidéliser ses clients"...'
                         sleep 2
                         echo 'Test OK!'
-                        echo 'Testing "[US] Proposer des différents types d'abonnement pour l'application"...'
+                        echo 'Testing "[US] Proposer des différents types d\'abonnement pour l\'application"...'
                         sleep 1
                         echo 'Test OK!'
                         echo 'Testing "[US] Proposer un diététicien personnel"...'
@@ -158,9 +158,18 @@ pipeline {
         }
         stage ('DEPLOY'){
             steps{
-                echo "Deploying on ${params.BRANCH} env..."
-                sleep 12
-                echo 'Deploy COMPLETE!'
+                script{
+                    if (params.SEX)=="MAN" {
+                        echo "Welcome Mister ${params.NAME}"
+                    }
+                    else{
+                        echo "Welcome Miss ${params.NAME}"    
+                    }
+                
+                    echo "You want to lose ${params.LOSE} kg."
+                    sleep 12
+                    echo 'Deploy COMPLETE!'
+                }
             }
         }
    }
