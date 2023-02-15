@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         string(name: 'NAME', description: 'Please tell me your name')
-        string(name: 'AGE', description: 'What is your age?' value: 'ex:21')
+        number(name: 'AGE', description: 'What is your age?')
         string(name: 'WEIGHT', description: 'Please tell me your weight')
         string(name: 'LOSE', description: 'How many weight you want lose?')
         text(name: 'DESC', description:'Describe about the job details')
