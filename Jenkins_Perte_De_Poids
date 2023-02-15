@@ -175,7 +175,7 @@ pipeline {
         stage ('DEPLOY'){
             steps{
                 script{
-                    if (params.SEX)=="MALE" {
+                    if (params.SEX=="MALE") {
                         echo "Welcome Mister ${params.NAME}"
                     }
                     else{
