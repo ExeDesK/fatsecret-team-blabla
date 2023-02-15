@@ -14,14 +14,32 @@ pipeline {
             steps {
                 echo 'Building app...'
                 sleep 1
-                echo 'Building "[EPIC] Proposer un rapport calorique"...'
+                echo 'Build OK!'
+                echo 'Building "[EPIC] Application pour surveiller votre ligne au quotidien et vous aider à perdre du poids"...'
                 sleep 2
                 echo 'Build OK!'
-                echo 'Building "[EPIC] Proposer un journal de suivi"...'
+                echo 'Building "[US] Proposer une évaluation via AppStore ou GooglePlay"...'
                 sleep 1
                 echo 'Build OK!'
-                echo 'Building "[EPIC] Challenge de régime sur trois mois"...'
+                echo 'Building "[US] Fidéliser ses clients"...'
+                sleep 2
+                echo 'Build OK!'
+                echo 'Building "[US] Proposer des témoignages de clients"...'
+                sleep 2
+                echo 'Build OK!'
+                echo 'Building "[US] Proposer des régimes en fonction de la pratique alimentaire"...'
                 sleep 1
+                echo 'Build OK!'
+                echo 'Building "[US] Proposer un questionnaire"...'
+                sleep 1
+                echo 'Build OK!'
+                echo 'Building "[US] Application disign moderne et intéractif"...'
+                sleep 1
+                echo 'Build OK!'
+
+
+                echo 'Building "[EPIC] Proposer un rapport calorique"...'
+                sleep 2
                 echo 'Build OK!'
                 echo 'Building "[US] Proposer des bagdes"...'
                 sleep 2
@@ -29,25 +47,12 @@ pipeline {
                 echo 'Building "[US] Proposer des réductions dans des salles de sports"...'
                 sleep 2
                 echo 'Build OK!'
-                echo 'Building "[US] Application disign moderne et intéractif"...'
-                sleep 1
-                echo 'Build OK!'
-                echo 'Building "[US] Proposer un questionnaire"...'
-                sleep 1
-                echo 'Build OK!'
                 echo 'Building "[US] Proposer des cours de sports"...'
                 sleep 2
                 echo 'Build OK!'
-                echo 'Building "[US] Proposer des régimes en fonction de la pratique alimentaire"...'
-                sleep 1
-                echo 'Build OK!'
-                echo 'Building "[US] Prososer un système de livraison à domicile"...'
-                sleep 2
-                echo 'Build OK!'
-                echo 'Building "[US] Proposer des témoignages de clients"...'
-                sleep 2
-                echo 'Build OK!'
-                echo 'Building "[US] Demander le sexe des utilisateurs"...'
+
+
+                echo 'Building "[EPIC] Proposer un journal de suivi"...'
                 sleep 1
                 echo 'Build OK!'
                 echo 'Building "[US] Proposer des plats diététiques"...'
@@ -56,27 +61,30 @@ pipeline {
                 echo 'Building "[US] Proposer un programme personnalisé aux clients"...'
                 sleep 2
                 echo 'Build OK!'
-                echo 'Building "[US] Fidéliser ses clients"...'
-                sleep 2
-                echo 'Build OK!'
-                echo 'Building "[US] Proposer des différents types d\'abonnement pour l\'application"...'
-                sleep 1
-                echo 'Build OK!'
                 echo 'Building "[US] Proposer un diététicien personnel"...'
-                sleep 1
-                echo 'Build OK!'
-                echo 'Building "[US] Simuler ma perte de poids via un avatar"...'
-                sleep 2
-                echo 'Build OK!'
-                echo 'Building "[US] Proposer une évaluation via AppStore ou GooglePlay"...'
                 sleep 1
                 echo 'Build OK!'
                 echo 'Building "[US] Connaitre mon poids en fonction du temps"...'
                 sleep 1
                 echo 'Build OK!'
-                echo 'Building "[EPIC] Application pour surveiller votre ligne au quotidien et vous aider à perdre du poids"...'
+
+
+                echo 'Building "[EPIC] Challenge de régime sur trois mois"...'
+                sleep 1
+                echo 'Build OK!'
+                echo 'Building "[US] Proposer des différents types d\'abonnement pour l\'application"...'
+                sleep 1   
+                echo 'Build OK!'
+                echo 'Building "[US] Prososer un système de livraison à domicile"...'
                 sleep 2
                 echo 'Build OK!'
+                echo 'Building "[US] Demander le sexe des utilisateurs"...'
+                sleep 1
+                echo 'Build OK!'
+                echo 'Building "[US] Simuler ma perte de poids via un avatar"...'
+                sleep 2
+                echo 'Build OK!'
+
                 echo 'Build COMPLETE!'
             }
         }
@@ -88,15 +96,32 @@ pipeline {
                     }
                     else{
                         echo 'Testing app...'
-                        sleep 1
-                        echo 'Testing "[EPIC] Proposer un rapport calorique"...'
+                        echo 'Test OK!'
+                        echo 'Testing "[EPIC] Application pour surveiller votre ligne au quotidien et vous aider à perdre du poids"...'
                         sleep 2
                         echo 'Test OK!'
-                        echo 'Testing "[EPIC] Proposer un journal de suivi"...'
+                        echo 'Testing "[US] Proposer une évaluation via AppStore ou GooglePlay"...'
                         sleep 1
                         echo 'Test OK!'
-                        echo 'Testing "[EPIC] Challenge de régime sur trois mois"...'
+                        echo 'Testing "[US] Fidéliser ses clients"...'
+                        sleep 2
+                        echo 'Test OK!'
+                        echo 'Testing "[US] Proposer des témoignages de clients"...'
+                        sleep 2
+                        echo 'Test OK!'
+                        echo 'Testing "[US] Proposer des régimes en fonction de la pratique alimentaire"...'
                         sleep 1
+                        echo 'Test OK!'
+                        echo 'Testing "[US] Proposer un questionnaire"...'
+                        sleep 1
+                        echo 'Test OK!'
+                        echo 'Testing "[US] Application disign moderne et intéractif"...'
+                        sleep 1
+                        echo 'Test OK!'
+
+
+                        echo 'Testing "[EPIC] Proposer un rapport calorique"...'
+                        sleep 2
                         echo 'Test OK!'
                         echo 'Testing "[US] Proposer des bagdes"...'
                         sleep 2
@@ -104,25 +129,12 @@ pipeline {
                         echo 'Testing "[US] Proposer des réductions dans des salles de sports"...'
                         sleep 2
                         echo 'Test OK!'
-                        echo 'Testing "[US] Application disign moderne et intéractif"...'
-                        sleep 1
-                        echo 'Test OK!'
-                        echo 'Testing "[US] Proposer un questionnaire"...'
-                        sleep 1
-                        echo 'Test OK!'
                         echo 'Testing "[US] Proposer des cours de sports"...'
                         sleep 2
                         echo 'Test OK!'
-                        echo 'Testing "[US] Proposer des régimes en fonction de la pratique alimentaire"...'
-                        sleep 1
-                        echo 'Test OK!'
-                        echo 'Testing "[US] Prososer un système de livraison à domicile"...'
-                        sleep 2
-                        echo 'Test OK!'
-                        echo 'Testing "[US] Proposer des témoignages de clients"...'
-                        sleep 2
-                        echo 'Test OK!'
-                        echo 'Testing "[US] Demander le sexe des utilisateurs"...'
+
+
+                        echo 'Testing "[EPIC] Proposer un journal de suivi"...'
                         sleep 1
                         echo 'Test OK!'
                         echo 'Testing "[US] Proposer des plats diététiques"...'
@@ -131,27 +143,30 @@ pipeline {
                         echo 'Testing "[US] Proposer un programme personnalisé aux clients"...'
                         sleep 2
                         echo 'Test OK!'
-                        echo 'Testing "[US] Fidéliser ses clients"...'
-                        sleep 2
-                        echo 'Test OK!'
-                        echo 'Testing "[US] Proposer des différents types d\'abonnement pour l\'application"...'
-                        sleep 1
-                        echo 'Test OK!'
                         echo 'Testing "[US] Proposer un diététicien personnel"...'
-                        sleep 1
-                        echo 'Test OK!'
-                        echo 'Testing "[US] Simuler ma perte de poids via un avatar"...'
-                        sleep 2
-                        echo 'Test OK!'
-                        echo 'Testing "[US] Proposer une évaluation via AppStore ou GooglePlay"...'
                         sleep 1
                         echo 'Test OK!'
                         echo 'Testing "[US] Connaitre mon poids en fonction du temps"...'
                         sleep 1
                         echo 'Test OK!'
-                        echo 'Testing "[EPIC] Application pour surveiller votre ligne au quotidien et vous aider à perdre du poids"...'
+
+
+                        echo 'Testing "[EPIC] Challenge de régime sur trois mois"...'
+                        sleep 1
+                        echo 'Test OK!'
+                        echo 'Testing "[US] Proposer des différents types d\'abonnement pour l\'application"...'
+                        sleep 1   
+                        echo 'Test OK!'
+                        echo 'Building "[US] Prososer un système de livraison à domicile"...'
                         sleep 2
                         echo 'Test OK!'
+                        echo 'Testing "[US] Demander le sexe des utilisateurs"...'
+                        sleep 1
+                        echo 'Test OK!'
+                        echo 'Testing "[US] Simuler ma perte de poids via un avatar"...'
+                        sleep 2
+                        echo 'Test OK!'
+                        
                         echo 'Test COMPLETE!'
                     }
                 }
