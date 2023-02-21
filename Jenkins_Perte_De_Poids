@@ -176,7 +176,7 @@ pipeline {
         stage ('DEPLOY'){
             steps{
                 script{
-                    def BMI = sh(script: "./calculImc.py ${params.HEIGHT} ${params.WEIGHT}", returnStdout: true).trim()
+                    def BMI = sh(script: "calculImc.py ${params.HEIGHT} ${params.WEIGHT}", returnStdout: true).trim()
                     if (params.SEX=="MALE") {
                         echo "Welcome Mister ${params.NAME}"
                     }
