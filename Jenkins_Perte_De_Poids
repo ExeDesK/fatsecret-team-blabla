@@ -177,17 +177,15 @@ pipeline {
                 script{
                     def BMI = sh(script: "python3 ./calculImc.py ${params.HEIGHT} ${params.WEIGHT}", returnStdout: true).trim()
                     def healthState = sh(script: "python3 ./heathStateImc.py ${BMI}", returnStdout: true).trim()
+                    def stringSex = ""
                     if (params.SEX=="MALE") {
+                        stringSex = "Mister"
                         echo "Welcome Mister ${params.NAME}\nCoucou"
                     }
                     else{
-                        echo "Welcome Miss ${params.NAME}"    
+                        stringSex = "Miss" 
                     }
-                    echo "Currently, you weigh ${params.WEIGHT} kg"
-                    echo "And, you want to lose ${params.LOSE} kg."
-                    echo "You are ${params.AGE} years old."
-                    echo "Your actual BMI is: ${BMI}"
-                    echo "${healthState}"
+                    echo "Welcome ${stringSex} ${params.NAME},\nCurrently, you are ${params.AGE} years old,\n weigh ${params.WEIGHT} kg,\n are ${params.HEIGHT} cm tall\nand, you want to lose ${params.LOSE} kg.\n\nYour actual BMI is: ${BMI}\n${healthState}"
                     sleep 12
                     echo 'Deploy COMPLETE!'
                 }
