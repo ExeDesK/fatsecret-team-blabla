@@ -176,6 +176,7 @@ pipeline {
             steps{
                 script{
                     def BMI = sh(script: "python3 ./calculImc.py ${params.HEIGHT} ${params.WEIGHT}", returnStdout: true).trim()
+                    def floatBMI = parseFloat(BMI)
                     if (params.SEX=="MALE") {
                         echo "Welcome Mister ${params.NAME}"
                     }
@@ -185,10 +186,10 @@ pipeline {
                     echo "Currently, you weigh ${params.WEIGHT} kg"
                     echo "And, you want to lose ${params.LOSE} kg."
                     echo "You are ${params.AGE} years old."
-                    if (Float.parseFloat(BMI) < 18.5) echo "You are underweight"
-                    else if (Float.parseFloat(BMI) >=18.5 || BMI < 25) echo "You are in good health"
-                    else if (Float.parseFloat(BMI) >=25 || BMI < 30) echo "You are overweight"
-                    else if (Float.parseFloat(BMI) > 30) echo "You are obese"
+                    if (floatBMI < 18.5) echo "You are underweight"
+                    else if (floatBMI >=18.5 || BMI < 25) echo "You are in good health"
+                    else if (floatBMI >=25 || BMI < 30) echo "You are overweight"
+                    else if (floatBMI > 30) echo "You are obese"
                     echo "Your actual BMI is: ${BMI}"
                     sleep 12
                     echo 'Deploy COMPLETE!'
