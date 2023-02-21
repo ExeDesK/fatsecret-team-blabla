@@ -178,7 +178,7 @@ pipeline {
                     def BMI = sh(script: "python3 ./calculImc.py ${params.HEIGHT} ${params.WEIGHT}", returnStdout: true).trim()
                     def healthState = sh(script: "python3 ./heathStateImc.py ${BMI}", returnStdout: true).trim()
                     if (params.SEX=="MALE") {
-                        echo "Welcome Mister ${params.NAME}"
+                        echo "Welcome Mister ${params.NAME}\nCoucou"
                     }
                     else{
                         echo "Welcome Miss ${params.NAME}"    
