@@ -180,12 +180,11 @@ pipeline {
                     def stringSex = ""
                     if (params.SEX=="MALE") {
                         stringSex = "Mister"
-                        echo "Welcome Mister ${params.NAME}\nCoucou"
                     }
                     else{
                         stringSex = "Miss" 
                     }
-                    echo "Welcome ${stringSex} ${params.NAME},\nCurrently, you are ${params.AGE} years old,\n weigh ${params.WEIGHT} kg,\n are ${params.HEIGHT} cm tall\nand, you want to lose ${params.LOSE} kg.\n\nYour actual BMI is: ${BMI}\n${healthState}"
+                    echo "Welcome ${stringSex} ${params.NAME},\nCurrently, you are ${params.AGE} years old,\nweigh ${params.WEIGHT} kg,\nare ${params.HEIGHT} cm tall\nand, you want to lose ${params.LOSE} kg.\n\nYour actual BMI is: ${BMI}\n${healthState}\n\nGood luck and keep hope!"
                     sleep 12
                     echo 'Deploy COMPLETE!'
                 }
