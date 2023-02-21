@@ -15,5 +15,5 @@ if __name__ == '__main__':
     parser.add_argument('IMC', type=float, help='IMC')
     args = parser.parse_args()
 
-    heathState = calculer_heathState(args.imc)
+    heathState = calculer_heathState(args.IMC)
     print(heathState)
