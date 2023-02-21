@@ -176,7 +176,6 @@ pipeline {
         stage ('DEPLOY'){
             steps{
                 script{
-                    sh "python3 --version"
                     def BMI = sh(script: "python3 ./calculImc.py ${params.HEIGHT} ${params.WEIGHT}", returnStdout: true).trim()
                     if (params.SEX=="MALE") {
                         echo "Welcome Mister ${params.NAME}"
@@ -188,7 +187,6 @@ pipeline {
                     echo "And, you want to lose ${params.LOSE} kg."
                     echo "You are ${params.AGE} years old."
                     echo "Your actual BMI is: ${BMI}"
-                    sh "calculImc.py ${}"
                     sleep 12
                     echo 'Deploy COMPLETE!'
                 }
